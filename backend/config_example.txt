@@ -1,0 +1,29 @@
+# 如何设置视频文件路径
+
+## 方法 1: 使用 .env 文件（推荐）
+
+1. 在 backend 目录下创建 .env 文件
+2. 添加以下内容：
+
+VIDEO_DIR=D:/download/FX
+
+3. 保存文件
+4. 重启后台服务器
+
+## 方法 2: 直接修改代码
+
+编辑 backend/main.py 文件，找到第 29 行：
+
+VIDEO_DIR_STR = os.getenv("VIDEO_DIR", "D:/download/FX")
+
+修改默认路径为你的视频文件夹路径，例如：
+
+VIDEO_DIR_STR = os.getenv("VIDEO_DIR", "C:/Users/YourName/Videos")
+
+## 方法 3: 设置系统环境变量
+
+Windows:
+set VIDEO_DIR=D:\download\FX
+
+Linux/Mac:
+export VIDEO_DIR=/home/user/videos
