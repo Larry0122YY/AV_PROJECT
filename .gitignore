@@ -40,3 +40,6 @@ videos.json
 # *.mov
 # *.mkv
 # *.webm
+
+# Other project folders
+AV_folder/
